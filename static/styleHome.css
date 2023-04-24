@@ -1,0 +1,182 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+}
+nav .right{
+    display: flex;
+}
+nav .left{
+    display: flex;
+
+}
+.left img{
+    margin-top: 0px;
+    width: 30%;
+} 
+.left p{
+    margin-inline: 22px;
+    margin-top: 21px;
+}
+.right p{
+    margin-inline: 22px;
+    margin-top: 21px;
+
+}
+/* .right i{
+    margin-top: 22px;
+    font-size: 22px;
+} */
+.bt{
+    width: 100px;
+    height: 36px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 22px;
+    margin-top: 12px;
+}
+.bt:hover{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+} 
+.btr{
+    border: none;
+    width: 100px;
+    height: 36px;
+    background-color: inherit;
+    color: white;
+    border-radius: 22px;
+    margin-top: 12px;
+    font-weight: 500;
+}
+.btr:hover{
+    background-color: gray;
+}
+
+.card{
+    background-image: url(https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1903,h_644/v1613521692/assets/d9/ce6c00-32b0-4b93-9f0d-6f927d93da08/original/Rider_Home_bg_desktop2x.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 600px;
+}
+.main{
+    width: 400px;
+    height: 400px;
+    margin-left: 24px;
+     background-color: #fff;
+}
+.main .icon{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(202, 199, 199);
+}
+.main .icon .car{
+    margin-inline: 64px;
+    margin-top: 20px;
+    border-bottom: 3px solid black;
+}
+.icon .car i{
+    font-size: 130%;
+}
+.card h1{
+    padding: 35px;
+    font-size: 35px;
+
+}
+.card input{
+    width: 300px;
+    height: 30px;
+    background-color: rgb(206, 202, 202);
+    border: none;
+    margin-left: 35px;
+    margin-top: 8px;
+    padding: 8px;
+}
+.card .btn{
+    margin-left: 16px;
+    margin-top: 25px;
+}
+.card .btn .rn{
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-inline: 18px;
+}
+.card .btn button{
+    width: 140px;
+    height: 40px;
+    background-color: rgb(219, 216, 216);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    margin-inline: 18px;
+}
+.head h1{
+    padding: 35px;
+    font-size: 45px;
+}
+.ride .hopon{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+/* .hopon .economy{
+    display: flex;
+}
+
+.hopon .prime{
+    display: flex;
+} */
+.hopon .wifi{
+    padding-top: 80px;
+}
+.safe{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 35px;
+
+}
+.safe .img{
+    font-size: x-large;
+}
+.choose{
+    display: flex;
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    margin: 35px;
+    font-size: x-large;
+    background-color: rgb(231, 225, 225);
+}
+.down{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    font-size: xx-large;
+    margin-bottom: 20px;
+    /* border-bottom: 3px solid black; */
+}
+.down .img{
+    border-bottom: 3px solid black;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 45px;
+}

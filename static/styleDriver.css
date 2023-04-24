@@ -1,0 +1,127 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+}
+nav .right{
+    display: flex;
+}
+nav .left{
+    display: flex;
+
+}
+.left img{
+    margin-top: 0px;
+    width: 30%;
+} 
+.bt{
+    text-align: center;
+    width: 100px;
+    height: 36px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 22px;
+    margin-top: 12px;
+}
+.bt:hover{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+} 
+.btr{
+    border: none;
+    width: 100px;
+    height: 36px;
+    background-color: inherit;
+    color: white;
+    border-radius: 22px;
+    margin-top: 12px;
+    font-weight: 500;
+}
+.btr:hover{
+    background-color: gray;
+}
+.right i{
+    margin-top: 22px;
+    font-size: 22px;
+}
+/* .drive{
+    width: fit-contents;
+} */
+
+
+.main {
+	color: #fff;
+	padding: 100px;
+	text-align: center;
+}
+
+.main h1 {
+	font-size: 48px;
+	margin: 0;
+}
+
+.main p {
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 30px 0;
+}
+
+.button {
+	background-color: #000;
+	border: none;
+	border-radius: 25px;
+	color: #fff;
+	display: inline-block;
+	font-size: 20px;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+.button:hover{
+    background-color: gray;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 50px;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	flex-basis: calc(33.33% - 20px);
+	margin-bottom: 30px;
+	padding: 40px;
+}
+
+.card h2 {
+	font-size: 24px;
+	margin: 0;
+}
+
+.card p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 20px 0;
+}
+
+footer {
+	background-color: #000;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+

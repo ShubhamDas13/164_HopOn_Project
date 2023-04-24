@@ -1,0 +1,81 @@
+DROP DATABASE IF exists HOPON_DB;
+
+CREATE DATABASE IF NOT EXISTS HOPON_DB;
+
+USE HOPON_DB;
+
+CREATE TABLE VEHICLES
+(
+Reg_no VARCHAR(20) PRIMARY KEY,
+V_type CHAR(30),
+Total_Seats INT,
+V_Model VARCHAR(50),
+Model_Year YEAR,
+Prime_ride BOOLEAN,
+Air_Conditioned BOOLEAN,
+Wifi BOOLEAN
+);
+
+CREATE TABLE DRIVER
+(
+Driver_ID INT PRIMARY KEY,
+D_name VARCHAR(30) NOT NULL,
+Age INT,
+Phone_no BIGINT,
+Aadhar_no BIGINT UNIQUE,
+Experience VARCHAR(150),
+Rating FLOAT,
+Earnings FLOAT,
+Registration_no VARCHAR(20),
+CONSTRAINT DRIVER_reg_fk
+FOREIGN KEY(Registration_no) REFERENCES VEHICLES(Reg_no)
+); 
+
+CREATE TABLE CUSTOMERS (
+Customer_ID INT PRIMARY KEY,
+C_name VARCHAR(50) not null,
+C_Phone_No VARCHAR(50),
+Email_id VARCHAR(50) not null unique,
+C_age INT, 
+C_Mode_of_payment VARCHAR(50)
+);
+
+CREATE TABLE TRIP 
+(
+Trip_ID INT PRIMARY KEY,
+Booking_time VARCHAR(50) ,
+Trip_date VARCHAR(50) ,
+Pickup_Location VARCHAR(50) ,
+Drop_Location VARCHAR(50) ,
+Distance DECIMAL(8,2) ,
+Pickup_time VARCHAR(50) ,
+Waiting_time DECIMAL(2,0),
+Total_time DECIMAL(4,0),
+isOngoing BOOLEAN,
+isDone BOOLEAN
+);
+
+
+CREATE TABLE TRANSACTIONS (
+Transaction_ID VARCHAR(50) PRIMARY KEY,
+TripID_tran INT,
+CustomerID_tran INT,
+DriverID_tran INT,
+Mode_of_Payment VARCHAR(50),
+Coupon VARCHAR(50),
+CONSTRAINT TripID_tr_fk
+FOREIGN KEY(TripID_tran) REFERENCES TRIP(Trip_ID)
+);
+
+CREATE TRIGGER send_booking_notif AFTER INSERT ON TRIP
+FOR EACH ROW
+INSERT INTO NOTIFICATIONS(Cus_ID , Message) VALUES (NEW.Trip_ID, CONCAT('Your booking has been confirmed.'));
+
+CREATE TRIGGER del_bookings_on_cab_del BEFORE DELETE ON DRIVER
+FOR EACH ROW
+DELETE FROM TRANSACTIONS WHERE DriverID_tran = OLD.Driver_ID;
+
+CREATE TABLE NOTIFICATIONS(
+Cus_ID INT, 
+Message VARCHAR(50)
+);
