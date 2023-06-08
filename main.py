@@ -73,7 +73,7 @@ transactions = {
 
 host = "localhost"
 user = "root"
-password = "Shubham1310@"
+password = "pass"
 db = "HOPON_DB"
 print("Connecting to the server")
 connect = ConnectMySQL(host,user,password,db)
